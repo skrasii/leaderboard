@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>leaderboard</title>
+</head>
+
+<body>
+{{> leaderboard}}
+<br />
+<br />
+{{> addPlayerForm}}
+</body>
+
+<template name="leaderboard">
+<ul>
+{{#each player}}
+  <li class="{{selectedClass}}">{{name}} - {{score}}</li>
+{{/each}}
+Total players: {{totalPlayers}}
+<br />
+Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
+</ul>
+<input type="button" value="increase score" id="increment" />
+<input type="button" value="decrease score" id="decrement" /> 
+<input type="button" value="delete player" id="deletePlayer" /> 
+</template>
+
+<template name="addPlayerForm">
+<form>
+  <input type="text" id="playerName">
+  <input type="submit" value="Add Player">
+</form>
+</template>
+</html>
