@@ -10,9 +10,14 @@ if (Meteor.isClient) {
   }
   Template.leaderboard.events({
     'click li': function(){
-       Session.set('selectedPlayer', this._id);
+       
        if (Session.get('selectedPlayer') && Session.get('selectedPlayer') ===  this._id)
-         Session.set('selectedPlayer', 0);
+           // deselection
+           Session.set('selectedPlayer', 0);
+       else
+            // selection 
+            Session.set('selectedPlayer', this._id);
+        
      },
 
     'click #increment': function(){
