@@ -19,9 +19,11 @@ Total players: {{totalPlayers}}
 <br />
 Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
 </ul>
-<input type="button" value="increase score" id="increment" />
-<input type="button" value="decrease score" id="decrement" /> 
-<input type="button" value="delete player" id="deletePlayer" /> 
+    {{#if currentUser}}
+        <input type="button" value="increase score" id="increment" />
+        <input type="button" value="decrease score" id="decrement" /> 
+        <input type="button" value="delete player" id="deletePlayer" />
+    {{/if}}
 </template>
 
 <template name="addPlayerForm">
