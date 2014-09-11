@@ -5,10 +5,9 @@
 <body>
 {{> loginButtons}}
 <br />
+{{> addPlayerForm}}
 {{> leaderboard}}
 <br />
-<br />
-{{> addPlayerForm}}
 </body>
 
 <template name="leaderboard">
@@ -26,8 +25,12 @@ Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
 </template>
 
 <template name="addPlayerForm">
-<form>
-  <input type="text" id="playerName">
-  <input type="submit" value="Add Player">
-</form>
+    {{#if currentUser}}
+        <p>You are logged in.</p>
+        <form>
+            <input type="text" id="playerName">
+            <input type="submit" value="Add Player">
+        </form>
+    {{/if}}
+    <p>You are not signed in.</p>
 </template>
