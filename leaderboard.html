@@ -3,22 +3,22 @@
 </head>
 
 <body>
-{{> loginButtons}}
-<br />
-{{> addPlayerForm}}
-{{> leaderboard}}
-<br />
+    {{> loginButtons}}
+    <br />
+    {{> addPlayerForm}}
+    {{> leaderboard}}
+    <br />
 </body>
 
 <template name="leaderboard">
-<ul>
-{{#each player}}
-  <li class="{{selectedClass}}">{{name}} - {{score}}</li>
-{{/each}}
-Total players: {{totalPlayers}}
-<br />
-Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
-</ul>
+    <ul>
+        {{#each player}}
+          <li class="{{selectedClass}}">{{name}} - {{score}}</li>
+        {{/each}}
+        Total players: {{totalPlayers}}
+        <br />
+        Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
+    </ul>
     {{#if currentUser}}
         <input type="button" value="increase score" id="increment" />
         <input type="button" value="decrease score" id="decrement" /> 
@@ -28,7 +28,7 @@ Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
 
 <template name="addPlayerForm">
     {{#if currentUser}}
-        <p>You are logged in.</p>
+        <p>You are signed in.</p>
         <form>
             <input type="text" id="playerName">
             <input type="submit" value="Add Player">
