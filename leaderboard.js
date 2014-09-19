@@ -3,10 +3,12 @@ playerId = this._id;
 
 if (Meteor.isClient) {
   Template.leaderboard.player = function() {
-    return PlayersList.find({}, { sort: {score: -1}});
+    var currentUserId = Meteor.userId();
+    return PlayersList.find({createdBy: currentUserId}, { sort: {score: -1}});
   }
   Template.leaderboard.totalPlayers = function() {
-    return PlayersList.find().count();
+    var currentUserId = Meteor.userId();
+    return PlayersList.find({createdBy: currentUserId}).count();
   }
   Template.leaderboard.events({
     'click li': function(){
