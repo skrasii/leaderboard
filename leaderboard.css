@@ -1,9 +1,9 @@
 .selected {
-  background-color:rgba(30,199,255,0.4);
+  background-color:rgba(149,181,99,0.4);
 }
 
 body {
-    background: url(bg01.jpg) no-repeat fixed left top #333333;
+    background: url(bg03.jpg) no-repeat fixed left top #333333;
     background-size: 100% 100%;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     padding: 20px;
@@ -14,7 +14,7 @@ body {
 #leaders {
     width: 420px;
     padding: 5px;
-    background-color: rgba(152,221,255,0.6);
+    background-color: rgba(255,255,255,0.7);
     border-radius: 3px;
     color: #000;
 }
