@@ -1,3 +1,59 @@
 .selected {
-  background-color:#ccc;
+  background-color:rgba(30,199,255,0.4);
+}
+
+body {
+    background: url(bg01.jpg) no-repeat fixed left top #333333;
+    background-size: 100% 100%;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    padding: 20px;
+    color: #fff;
+
+}
+
+#leaders {
+    width: 420px;
+    padding: 5px;
+    background-color: rgba(152,221,255,0.6);
+    border-radius: 3px;
+    color: #000;
+}
+
+#leaders ul {
+    padding-left: 20px;
+    color: #000;
+}
+
+#leaders li {
+    padding-left: 20px;
+    padding: 5px 5px 5px 8px;
+    list-style-type: none;
+    font-size: 10pt;
+    width: 151px;
+    
+}
+
+#stats {
+    padding-left: 8px;
+}
+
+#controls {
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+.form-style {
+    padding-bottom: 15px;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    background: #1878b8;
+}
+
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+    background: #166ba4;
+}
+
+#login-dropdown-list {
+    background: rgba(255,255,255,0.9);
 }

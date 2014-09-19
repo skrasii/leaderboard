@@ -10,29 +10,41 @@
     <br />
 </body>
 
+
 <template name="leaderboard">
-    <ul>
-        {{#each player}}
-          <li class="{{selectedClass}}">{{name}} - {{score}}</li>
-        {{/each}}
-        Total players: {{totalPlayers}}
-        <br />
-        Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
-    </ul>
-    {{#if currentUser}}
-        <input type="button" value="increase score" id="increment" />
-        <input type="button" value="decrease score" id="decrement" /> 
-        <input type="button" value="delete player" id="deletePlayer" />
-    {{/if}}
+    <div id="leaders">
+        <ul>
+            {{#each player}}
+              <li class="{{selectedClass}}">{{name}} - {{score}}</li>
+            {{/each}}
+
+            <div id="stats">
+            Total players: {{totalPlayers}}
+            <br />
+            Selected Player: {{marked.name}} - {{marked._id}} - {{marked.score}}
+            </div>
+        </ul>
+        {{#if currentUser}}
+            <div id="controls">
+                <input type="button" value="increase score" id="increment" />
+                <input type="button" value="decrease score" id="decrement" /> 
+                <input type="button" value="delete player" id="deletePlayer" />
+            </div>
+        {{/if}}
+    </div>
 </template>
+
 
 <template name="addPlayerForm">
     {{#if currentUser}}
         <p>You are signed in.</p>
-        <form>
-            <input type="text" id="playerName">
-            <input type="submit" value="Add Player">
-        </form>
+        <div class="form-style">
+            <form>
+                <input type="text" id="playerName">
+                <input type="submit" value="Add Player">
+            </form>
+        </div>
+    {{else}}
+        <p>You are not signed in.</p>
     {{/if}}
-    <p>You are not signed in.</p>
 </template>
