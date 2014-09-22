@@ -1,7 +1,11 @@
 PlayersList = new Meteor.Collection('players');
 playerId = this._id;
 
+//CLIENT SIDE//
 if (Meteor.isClient) {
+    
+  Meteor.subscribe('thePlayers');
+    
   Template.leaderboard.player = function() {
     var currentUserId = Meteor.userId();
     return PlayersList.find({createdBy: currentUserId}, { sort: {score: -1}});
@@ -65,7 +69,12 @@ if (Meteor.isClient) {
   }
 }
 
+//SERVER SIDE//
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-  });
+  //Meteor.startup(function () {
+  //});
+    Meteor.publish('thePlayers', function(){
+        return PlayersList.find();
+    });
+    
 }
