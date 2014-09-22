@@ -11,6 +11,26 @@ body {
 
 }
 
+input#playerName {
+    border-radius: 3px;
+    border: none;
+    padding-left: 7px;
+    height: 20px;
+    width: 143px;
+}
+
+.btn {
+    border-radius: 3px;
+    margin-left: 5px;
+    border: none;
+    height: 22px;
+    width: 100px;
+}
+
+.btn:hover {
+    background-color: rgb(210,210,210);
+}
+
 #leaders {
     width: 420px;
     padding: 5px;
@@ -38,7 +58,7 @@ body {
 }
 
 #controls {
-    padding-left: 25px;
+    padding-left: 23px;
     padding-bottom: 10px;
 }
 

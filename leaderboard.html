@@ -26,9 +26,9 @@
         </ul>
         {{#if currentUser}}
             <div id="controls">
-                <input type="button" value="increase score" id="increment" />
-                <input type="button" value="decrease score" id="decrement" /> 
-                <input type="button" value="delete player" id="deletePlayer" />
+                <input type="button" value="&#8593; increase score" id="increment" class="btn" />
+                <input type="button" value="&#8595; decrease score" id="decrement" class="btn" /> 
+                <input type="button" value="&#128695; delete player" id="deletePlayer" class="btn" />
             </div>
         {{/if}}
     </div>
@@ -40,8 +40,8 @@
         <p>You are signed in.</p>
         <div class="form-style">
             <form>
-                <input type="text" id="playerName">
-                <input type="submit" value="Add Player">
+                <input type="text" id="playerName" />
+                <input type="submit" value="Add Player" class="btn" />
             </form>
         </div>
     {{else}}

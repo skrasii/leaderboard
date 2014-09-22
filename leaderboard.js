@@ -19,7 +19,6 @@ if (Meteor.isClient) {
        else
             // selection 
             Session.set('selectedPlayer', this._id);
-        
      },
 
     'click #increment': function(){
