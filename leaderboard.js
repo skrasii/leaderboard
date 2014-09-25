@@ -74,7 +74,8 @@ if (Meteor.isServer) {
   //Meteor.startup(function () {
   //});
     Meteor.publish('thePlayers', function(){
-        return PlayersList.find();
+        var currentUserId = this.userId;
+        return PlayersList.find({ createdBy: currentUserId });
     });
     
 }
